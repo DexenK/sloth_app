@@ -1,0 +1,2 @@
+class Sloth < ApplicationRecord
+end

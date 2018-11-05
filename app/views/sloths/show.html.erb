@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @sloth.color %>
+</p>
+
+<p>
+  <strong>Paws:</strong>
+  <%= @sloth.paws %>
+</p>
+
+<p>
+  <strong>Fluffiness:</strong>
+  <%= @sloth.fluffiness %>
+</p>
+
+<%= link_to 'Edit', edit_sloth_path(@sloth) %> |
+<%= link_to 'Back', sloths_path %>

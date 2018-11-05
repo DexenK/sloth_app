@@ -1,0 +1,32 @@
+<%= form_with(model: sloth, local: true) do |form| %>
+  <% if sloth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sloth.errors.count, "error") %> prohibited this sloth from being saved:</h2>
+
+      <ul>
+      <% sloth.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paws %>
+    <%= form.text_field :paws %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fluffiness %>
+    <%= form.number_field :fluffiness %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
